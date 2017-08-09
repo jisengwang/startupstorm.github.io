@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-817.000000, -2997.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="Group-21" transform="translate(760.000000, 2997.000000)">
+                <g id="Group-18" transform="translate(57.000000, 0.000000)">
+                    <g id="facebook-logo-button">
+                        <path d="M20.85384,0 C9.35508,0 0,9.35508 0,20.85384 C0,32.35176 9.35508,41.70768 20.85384,41.70768 C32.35176,41.70768 41.70768,32.35176 41.70768,20.85384 C41.70768,9.35508 32.35344,0 20.85384,0 Z M26.04,21.588 L22.64724,21.588 C22.64724,27.00852 22.64724,33.68064 22.64724,33.68064 L17.61984,33.68064 C17.61984,33.68064 17.61984,27.0732 17.61984,21.588 L15.23004,21.588 L15.23004,17.31408 L17.61984,17.31408 L17.61984,14.54964 C17.61984,12.56976 18.56064,9.47604 22.69344,9.47604 L26.41884,9.49032 L26.41884,13.63908 C26.41884,13.63908 24.15504,13.63908 23.71488,13.63908 C23.27472,13.63908 22.64892,13.85916 22.64892,14.80332 L22.64892,17.31492 L26.47932,17.31492 L26.04,21.588 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

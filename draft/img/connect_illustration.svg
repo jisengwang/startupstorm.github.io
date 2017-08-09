@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="196px" height="196px" viewBox="0 0 196 196" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 19</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="23.6814875%" cy="3.42052353%" fx="23.6814875%" fy="3.42052353%" r="107.924689%" gradientTransform="translate(0.236815,0.034205),scale(0.933333,1.000000),rotate(58.307412),translate(-0.236815,-0.034205)" id="radialGradient-1">
+            <stop stop-color="#3B9AFA" offset="0%"></stop>
+            <stop stop-color="#22369D" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="67.5590217%" cy="-25.446343%" fx="67.5590217%" fy="-25.446343%" r="78.890706%" id="radialGradient-2">
+            <stop stop-color="#7DC6FF" offset="0%"></stop>
+            <stop stop-color="#0476F7" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="-45.5941417%" fx="50%" fy="-45.5941417%" r="96.0223329%" id="radialGradient-3">
+            <stop stop-color="#7DC6FF" offset="0%"></stop>
+            <stop stop-color="#0476F7" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="50%" cy="-10.8824784%" fx="50%" fy="-10.8824784%" r="69.0986528%" id="radialGradient-4">
+            <stop stop-color="#7DC6FF" offset="0%"></stop>
+            <stop stop-color="#0476F7" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="50%" y1="2.38560268%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#2551DD" offset="0%"></stop>
+            <stop stop-color="#212D86" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-326.000000, -980.000000)">
+            <g id="Group-19" transform="translate(326.000000, 980.000000)">
+                <rect id="Rectangle-3" fill="#CBE4FD" x="0" y="0" width="196" height="196" rx="10"></rect>
+                <path d="M80.5,56.5 L115.5,56.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <path d="M141.5,70.5 L141.5,122.538447" id="Line-Copy" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <path d="M55.5,62.5 L144.5,145.5" id="Line-Copy-3" stroke="url(#radialGradient-1)" stroke-linecap="square" stroke-dasharray="3"></path>
+                <path d="M55.5,70.5 L55.5,122.538447" id="Line-Copy-2" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <path d="M147.5,138.5 L56.4780246,138.5" id="Line-Copy-4" stroke="#FFFFFF" stroke-linecap="square"></path>
+                <g id="Group-12" transform="translate(27.000000, 31.000000)">
+                    <g id="Group-10">
+                        <circle id="Oval" fill="url(#radialGradient-2)" cx="27.5" cy="27.5" r="27.5"></circle>
+                        <g id="Group-7" transform="translate(9.000000, 28.000000)" stroke="#FFFFFF" stroke-linecap="round">
+                            <path d="M0,4 C2.33327354,1.33333333 4.57567195,0 6.72719523,0 C8.8787185,0 10.9696534,1.33333333 13,4" id="Path-2"></path>
+                            <path d="M25,4 C27.3332735,1.33333333 29.5756719,0 31.7271952,0 C33.8787185,0 35.9696534,1.33333333 38,4" id="Path-2-Copy"></path>
+                        </g>
+                        <path d="M23,40 C24.3313345,43.1494512 26.1658945,44.731987 28.5036801,44.7476076 C30.8414657,44.7632282 32.5413196,43.1806923 33.6032417,40" id="Path-3" stroke="#FFFFFF" stroke-linecap="round"></path>
+                    </g>
+                    <g id="Group-9" transform="translate(87.000000, 0.000000)">
+                        <circle id="Oval-Copy" fill="url(#radialGradient-3)" cx="27.5" cy="27.5" r="27.5"></circle>
+                        <circle id="Oval-2" fill="#FFFFFF" cx="12" cy="33" r="2"></circle>
+                        <circle id="Oval-2-Copy-2" fill="#FFFFFF" cx="40" cy="33" r="2"></circle>
+                        <path d="M25.765321,44.2923212 C21.3481752,44.3661883 20.9486535,47.4019933 25.2629169,47.8586219" id="Path-5" stroke="#FFFFFF" stroke-linecap="round"></path>
+                        <path d="M25.7228945,40 C21.2757544,39.5711163 18.6522379,44.158069 25.7228945,44.2238131" id="Path-5-Copy" stroke="#FFFFFF" stroke-linecap="round"></path>
+                    </g>
+                    <g id="Group-11" transform="translate(0.000000, 79.000000)">
+                        <circle id="Oval-Copy-3" fill="url(#radialGradient-4)" cx="27.5" cy="27.5" r="27.5"></circle>
+                        <path d="M14,32 C15.2677128,29.2890834 16.8317935,27.95575 18.6922421,28 C20.5526907,28.04425 21.98861,29.3775833 23,32" id="Path-2-Copy-2" stroke="#FFFFFF" stroke-linecap="round"></path>
+                        <circle id="Oval-2-Copy" fill="#FFFFFF" cx="40" cy="31" r="2"></circle>
+                        <path d="M18,41.6420928 C21.2376112,43.7440448 25.0545719,44.6513791 28.8190192,44.0778503 C32.7848212,43.4736444 36.6923419,41.2259204 39.8028062,37" id="Path-6" stroke="#FFFFFF" stroke-linecap="round" transform="translate(28.901403, 40.623291) scale(-1, 1) translate(-28.901403, -40.623291) "></path>
+                    </g>
+                    <g id="Group-8" transform="translate(87.000000, 79.000000)">
+                        <circle id="Oval-Copy-2" fill="url(#linearGradient-5)" cx="27.5" cy="27.5" r="27.5"></circle>
+                        <path d="M14.6770112,25.6725574 C7.75470443,15.775822 1.75379634,28.2274699 14.2964861,35.4669946 L14.6770112,25.6725574 Z M14.7591136,25.7162783 C21.6814203,15.8195429 26.9391327,28.209269 14.3964429,35.4487937 L14.7591136,25.7162783 Z" id="Combined-Shape" stroke="#FFFFFF" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M37.6770112,25.6725574 C30.7547044,15.775822 24.7537963,28.2274699 37.2964861,35.4669946 L37.6770112,25.6725574 Z M37.7591136,25.7162783 C44.6814203,15.8195429 49.9391327,28.209269 37.3964429,35.4487937 L37.7591136,25.7162783 Z" id="Combined-Shape-Copy" stroke="#FFFFFF" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M26.5,44 C28.4329966,44 30,42.4329966 30,40.5 C30,38.5670034 28.25,39.4189348 26.5,39.4189348 C24.75,39.4189348 23,38.5670034 23,40.5 C23,42.4329966 24.5670034,44 26.5,44 Z" id="Oval-3" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
