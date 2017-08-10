@@ -22,6 +22,12 @@ body {margin:0; overflow-x: hidden;}
   -webkit-box-shadow: 0 3px 14px 0 #676767;
 	box-shadow: 0 3px 14px 0 #676767;
   align-items: right;
+  z-index: 1;
+
+  /*To make navbar sticky*/
+  top: 0;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar a {
@@ -85,6 +91,7 @@ body {margin:0; overflow-x: hidden;}
   background-image: url("../img/blue_bg.svg");
   background-position: 50% 50%;
   height: 500px;
+  margin-top: 70px; /*For sticky navbar spacing*/
   z-index: -1;
 }
 
@@ -548,7 +555,7 @@ body {margin:0; overflow-x: hidden;}
 
 /* defining responsive class when hamburger menu active*/
 @media screen and (max-width: 800px) {
-  .navbar.responsive {position: relative}
+  /*.navbar.responsive {position: relative}*/
   .navbar.responsive .hamburger-menu {
     position: absolute;
     right: 0;
@@ -649,16 +656,9 @@ body {margin:0; overflow-x: hidden;}
       min-width: 100%;
       margin-left: 0%;
       margin-bottom: 10%;
-
     }
 
 }
-
-
-@media screen and (max-width: 380px) {
-
-}
-
 
 @media screen and (max-width: 600px) {
 
