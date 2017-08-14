@@ -99,11 +99,11 @@ body {margin:0; overflow-x: hidden;}
   z-index: 100;
 }
 
-#panel1 #container {
+#bm #container {
   width: 90%;
   /*max-height: 230px;*/
   /*margin: auto;*/
-  margin: 200px;
+  /*margin: 200px;*/
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -112,7 +112,7 @@ body {margin:0; overflow-x: hidden;}
   align-items: center;
 }
 
-#panel1 #content {
+#bm #content {
   	height: 129px;
     width: 596px;
     color: #FFFFFF;
@@ -125,7 +125,7 @@ body {margin:0; overflow-x: hidden;}
     display: flex;
 }
 
-#panel1 #logo {
+#bm #logo {
   /*float: left;*/
 	height: 223px;
 	width: 181px;
@@ -504,17 +504,17 @@ body {margin:0; overflow-x: hidden;}
 }
 
 @media screen and (min-width: 401px) and (max-width: 924px){
-  #panel1 #container {
+  #bm #container {
     margin-top: 100px;
     /*background-color: red;*/
   }
 
-  #panel1 #content {
+  #bm #content {
     text-align:center;
     margin-top: 20px;
   }
 
-  #panel1 #logo {
+  #bm #logo {
     /*background-color: green;*/
     padding-right: 10px;
   }
@@ -589,11 +589,11 @@ body {margin:0; overflow-x: hidden;}
     box-shadow:         inset 0 -11px 0px 0px #FFFFFF;
   }
 
-  #panel1 {
+  #bm {
     height: 400px;
   }
 
-  #panel1 #content {
+  #bm #content {
   	height: 145px;
   	width: 294px;
   	color: #FFFFFF;
@@ -606,14 +606,14 @@ body {margin:0; overflow-x: hidden;}
     /*display: block;*/
   }
 
-  #panel1 #container {
+  #bm #container {
     align-content: center;
     text-align: center;
     margin: 0px;
     /*width: 204px;*/
     height: 321px;
   }
-  #panel1 #logo {
+  #bm #logo {
   	height: 151px;
     width: 107px;
     margin: 20px 0px 20px 0px;
