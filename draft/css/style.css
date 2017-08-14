@@ -51,10 +51,7 @@ body {margin:0; overflow-x: hidden;}
   background-color: #ddd;
   color: black;
 }
-/*
-.navbar img {
-  height: 34px;
-}*/
+
 
 .link {
   cursor: pointer;
@@ -69,10 +66,10 @@ body {margin:0; overflow-x: hidden;}
 }
 
 .navbar .logo {
-  height: 55px;
-  width: 145px;
-  padding-left: 1.56%;
-  padding-top: 7px;
+  /*height: 55px;*/
+  /*width: 145px;*/
+  padding-left: 20px;
+  padding-top: 9px;
   float: left;
   display: block;
 }
@@ -95,11 +92,11 @@ body {margin:0; overflow-x: hidden;}
   z-index: -1;
 }
 
-#panel1 #container {
+#bm #container {
   width: 90%;
   /*max-height: 230px;*/
   /*margin: auto;*/
-  margin: 200px;
+  /*margin: 200px;*/
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -108,7 +105,7 @@ body {margin:0; overflow-x: hidden;}
   align-items: center;
 }
 
-#panel1 #content {
+#bm #content {
   	height: 129px;
     width: 596px;
     color: #FFFFFF;
@@ -121,7 +118,7 @@ body {margin:0; overflow-x: hidden;}
     display: flex;
 }
 
-#panel1 #logo {
+#bm #logo {
   /*float: left;*/
 	height: 223px;
 	width: 181px;
@@ -349,6 +346,7 @@ body {margin:0; overflow-x: hidden;}
 
 #panel4 button:hover {
   background-color: #0476F7;
+  cursor: pointer;
 }
 
 #panel4 #message {
@@ -375,6 +373,92 @@ body {margin:0; overflow-x: hidden;}
 #panel4 #last {
   margin-right: 0px;
 }
+
+
+
+#contact-us-panel {
+  margin-top: 70px; /*For sticky navbar spacing*/
+  height: 834px;
+  background-color: #212D86;
+  overflow: hidden;
+}
+
+#contact-us-panel h1 {
+  color: #0476F7;
+  color: #FFFFFF;
+  font-family: "Apercu Pro";
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 45px;
+  margin-bottom: 32px;
+  margin-top: 2.14%;
+  padding-top: 6.66%;
+}
+
+#contact-us-panel p {
+	color: #FFFFFF;
+	font-family: "Apercu Pro";
+	font-size: 19px;
+	line-height: 25px;
+  width: 600px;
+  height: 100px;
+}
+
+#contact-us-panel img {
+  padding-top: 16.15%;
+  padding-bottom: 2.87%;
+}
+
+#contact-us-panel form {
+  height: 390px;
+  width: 564px;
+  padding-left: 10px;
+  margin-top: 20px;
+}
+
+#contact-us-panel label {
+	color: #FFFFFF;
+	font-family: "Apercu Pro";
+	font-size: 19px;
+	line-height: 24px;
+}
+
+#contact-us-panel .field {
+  padding-bottom: 2.77%;
+}
+
+#contact-us-panel button {
+	border: 1px solid #FFFFFF;
+	padding: 10px 20px 10px 20px;
+  background: transparent;
+  width: 224px;
+  border-radius: 30px;
+  color: #FFFFFF;
+  font-family: "Apercu Pro";
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  margin-top: 3.3%;
+  display: inline-block;
+}
+
+#contact-us-panel button:hover {
+  background-color: #0476F7;
+  cursor: pointer;
+}
+
+#contact-us-panel #confirm {
+  font-family: "Apercu Bold Pro";
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 45px;
+}
+
+#contact-us-panel #email {
+  color: #6eb2ff
+}
+
+
 
 /* Fix CSS bug when hamburger menu is open and user resizes screen width > 600px*/
 /* Align center is defined differently when screen width < 600px (see below)*/
@@ -413,17 +497,17 @@ body {margin:0; overflow-x: hidden;}
 }
 
 @media screen and (min-width: 401px) and (max-width: 924px){
-  #panel1 #container {
+  #bm #container {
     margin-top: 100px;
     /*background-color: red;*/
   }
 
-  #panel1 #content {
+  #bm #content {
     text-align:center;
     margin-top: 20px;
   }
 
-  #panel1 #logo {
+  #bm #logo {
     /*background-color: green;*/
     padding-right: 10px;
   }
@@ -443,7 +527,11 @@ body {margin:0; overflow-x: hidden;}
     margin-left: 5%;
     margin-right: 5%;
     padding-bottom: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+  }
+
+  #event-last {
+    padding-bottom: 40px;
   }
 
   #event img {
@@ -494,11 +582,11 @@ body {margin:0; overflow-x: hidden;}
     box-shadow:         inset 0 -11px 0px 0px #FFFFFF;
   }
 
-  #panel1 {
+  #bm {
     height: 400px;
   }
 
-  #panel1 #content {
+  #bm #content {
   	height: 145px;
   	width: 294px;
   	color: #FFFFFF;
@@ -511,14 +599,14 @@ body {margin:0; overflow-x: hidden;}
     /*display: block;*/
   }
 
-  #panel1 #container {
+  #bm #container {
     align-content: center;
     text-align: center;
     margin: 0px;
     /*width: 204px;*/
     height: 321px;
   }
-  #panel1 #logo {
+  #bm #logo {
   	height: 151px;
     width: 107px;
     margin: 20px 0px 20px 0px;
