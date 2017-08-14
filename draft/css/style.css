@@ -78,18 +78,25 @@ body {margin:0; overflow-x: hidden;}
   float: right;
 }
 
+#bm {
+    /*z-index: -100;*/
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin-top: 70px; /*For sticky navbar spacing*/
+}
+
 #panel1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  position: relative;
   background:radial-gradient(circle at top, #7DC6FF 0%, #0476F7 100%);
   background-image: url("../img/blue_bg.svg");
   background-position: 50% 50%;
   height: 500px;
   margin-top: 70px; /*For sticky navbar spacing*/
-  z-index: -1;
+  z-index: 100;
 }
 
 #panel1 #container {
@@ -346,6 +353,7 @@ body {margin:0; overflow-x: hidden;}
 
 #panel4 button:hover {
   background-color: #0476F7;
+  cursor: pointer;
 }
 
 #panel4 #message {
@@ -372,6 +380,92 @@ body {margin:0; overflow-x: hidden;}
 #panel4 #last {
   margin-right: 0px;
 }
+
+
+
+#contact-us-panel {
+  margin-top: 70px; /*For sticky navbar spacing*/
+  height: 834px;
+  background-color: #212D86;
+  overflow: hidden;
+}
+
+#contact-us-panel h1 {
+  color: #0476F7;
+  color: #FFFFFF;
+  font-family: "Apercu Pro";
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 45px;
+  margin-bottom: 32px;
+  margin-top: 2.14%;
+  padding-top: 6.66%;
+}
+
+#contact-us-panel p {
+	color: #FFFFFF;
+	font-family: "Apercu Pro";
+	font-size: 19px;
+	line-height: 25px;
+  width: 600px;
+  height: 100px;
+}
+
+#contact-us-panel img {
+  padding-top: 16.15%;
+  padding-bottom: 2.87%;
+}
+
+#contact-us-panel form {
+  height: 390px;
+  width: 564px;
+  padding-left: 10px;
+  margin-top: 20px;
+}
+
+#contact-us-panel label {
+	color: #FFFFFF;
+	font-family: "Apercu Pro";
+	font-size: 19px;
+	line-height: 24px;
+}
+
+#contact-us-panel .field {
+  padding-bottom: 2.77%;
+}
+
+#contact-us-panel button {
+	border: 1px solid #FFFFFF;
+	padding: 10px 20px 10px 20px;
+  background: transparent;
+  width: 224px;
+  border-radius: 30px;
+  color: #FFFFFF;
+  font-family: "Apercu Pro";
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  margin-top: 3.3%;
+  display: inline-block;
+}
+
+#contact-us-panel button:hover {
+  background-color: #0476F7;
+  cursor: pointer;
+}
+
+#contact-us-panel #confirm {
+  font-family: "Apercu Bold Pro";
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 45px;
+}
+
+#contact-us-panel #email {
+  color: #6eb2ff
+}
+
+
 
 /* Fix CSS bug when hamburger menu is open and user resizes screen width > 600px*/
 /* Align center is defined differently when screen width < 600px (see below)*/

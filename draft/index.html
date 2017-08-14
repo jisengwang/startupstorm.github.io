@@ -25,13 +25,13 @@
   </script>
 
   <div class="navbar" id="main-navbar">
-    <img class="logo" src="img/nav_logo.png"/>
+    <span class="link" onclick="window.open('index.html','_self')"><img class="logo" src="img/nav_logo.png"/></span>
     <div class="align-items-right" id="link-container">
       <p hidden>&#32;&#32;&#32;&#32;</p> <!-- Unicode spaces to push first link off navbar (for formatting purposes) -->
       <p hidden>&#32;&#32;&#32;&#32;</p> <!-- Unicode spaces to push first link off navbar (for formatting purposes) -->
-      <a href="#home" class="selected">Home</a>
-      <a href="#team">Our Team</a>
-      <a href="#contact">Contact Us</a>
+      <a href="index.html" class="selected">Home</a>
+      <!-- <a href="team.html">Our Team</a> -->
+      <a href="contact-us.html">Contact Us</a>
 
       <span class="link" onclick="window.open('https://www.facebook.com/StartupStorm/')"><img class="social-icon first" src="img/facebook_icon.svg"/></span>
       <span class="link" onclick="window.open('https://twitter.com/UBCStartupStorm')"><img class="social-icon" src="img/twitter_icon.svg"/></span>
@@ -60,6 +60,8 @@
   }
   </script>
 
+  <!-- <div id="bm"> -->
+  <!-- </div> -->
   <div id="panel1">
     <section id="container">
       <img src="img/header_logo.svg" id="logo"/>
@@ -98,7 +100,7 @@
 
       <div class="column is-narrow" style="max-width:450px;">
         <h2>Discover cutting-edge technology</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Learn a new programming language or a new web framework at our hack nights and technical workshops. </p>
       </div>
 
     </div><br>
@@ -149,10 +151,9 @@
     <div class="container" data-aos="fade"><h1>Contact us</h1></div>
     <div data-aos="fade">
 
-      <div class="container"><p>StartupStorm is always looking for new ventures, opportunities, and connections. If you are interested in working with us, joining us, speaking at an event, or visiting one of our conferences, feel free to connect with StartupStorm today. Feel free to e-mail us at <a href="mailto:info@startupstorm.org" target="_top" id="email">info@startupstorm.org</a></p></div>
-
+      <div class="container"><p>StartupStorm is always looking for new ventures, opportunities, and connections. If you are interested in working with us, joining us or speaking at one of our events, feel free to connect with StartupStorm today. Feel free to e-mail us at <a href="mailto:info@startupstorm.org" target="_top" id="email">info@startupstorm.org</a></p></div>
       <div class="container">
-        <button><a href="mailto:info@startupstorm.org" target="_top" id="message">Send a message</a></button>
+        <a href="contact-us.html" id="message"><button>Send a message</button></a>
 
         <div id="icon-set"><center>
           <a href="mailto:info@startupstorm.org" target="_top"><img src="img/white_mail_icon.svg"/></a>
@@ -166,6 +167,24 @@
     </div>
 
   </div>
+
+
+
+
+    <!-- Scripts -->
+    <script src="animation/bodymovin.js"></script>
+    <script>
+
+    var animation = bodymovin.loadAnimation({
+      container: document.getElementById('bm').style.backgroundImage,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'animation/data.json'
+    })
+
+    </script>
+
 
 </body>
 

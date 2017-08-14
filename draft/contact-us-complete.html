@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="StartupStorm is a club for aspiring entrepreneurs, programmers and designers at the University of British Columbia.">
+  <meta name="keywords" content="StartupStorm,UBC,entrepreneurs,programmers,designers,software,technology,tech,hackathon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>StartupStorm</title>
+
+  <link rel="stylesheet" type="text/css" href="css/bulma.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/aos.css">
+  <script src="js/aos.js"></script>
+
+</head>
+
+<body>
+
+  <script> // For scroll animations
+  AOS.init({once: true});
+  </script>
+
+  <div class="navbar" id="main-navbar">
+    <span class="link" onclick="window.open('index.html','_self')"><img class="logo" src="img/nav_logo.png"/></span>
+    <div class="align-items-right" id="link-container">
+      <p hidden>&#32;&#32;&#32;&#32;</p> <!-- Unicode spaces to push first link off navbar (for formatting purposes) -->
+      <p hidden>&#32;&#32;&#32;&#32;</p> <!-- Unicode spaces to push first link off navbar (for formatting purposes) -->
+      <a href="index.html">Home</a>
+      <!-- <a href="team.html">Our Team</a> -->
+      <a href="contact-us.html" class="selected">Contact Us</a>
+
+      <span class="link" onclick="window.open('https://www.facebook.com/StartupStorm/')"><img class="social-icon first" src="img/facebook_icon.svg"/></span>
+      <span class="link" onclick="window.open('https://twitter.com/UBCStartupStorm')"><img class="social-icon" src="img/twitter_icon.svg"/></span>
+      <span class="link" onclick="window.open('https://www.instagram.com/startupstorm/')"><img class="social-icon last" src="img/ig_icon.svg"/></span>
+    </div>
+    <a href="javascript:void(0);" class="hamburger-menu" onclick="expandMenu()"><img src="img/hamburger_menu.png"/></a>
+
+  </div>
+
+
+  <script> // For when hamburger menu is clicked
+  function expandMenu() {
+    var nav = document.getElementById("main-navbar");
+    var links = document.getElementById("link-container");
+    if (nav.className === "navbar") {
+      nav.className += " responsive";
+      nav.className
+    } else {
+      nav.className = "navbar";
+    }
+    if (links.className.includes("align-center")){
+      links.className = "align-items-right"
+    } else {
+      links.className += " align-center";
+    }
+  }
+  </script>
+
+  <div id="contact-us-panel" style="height: 530px;">
+    <center><img  data-aos="slide-right" src="img/sent_icon.svg"/>
+    <p id="confirm" data-aos="fade">Thanks for reaching out! We’ll get back to to you ASAP.</p>
+  </center>
+  </div>
+
+
+</body>
+
+</html>
