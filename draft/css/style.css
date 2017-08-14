@@ -78,11 +78,9 @@ body {margin:0; overflow-x: hidden;}
   float: right;
 }
 
-#bm {
-    /*z-index: -100;*/
-    top: 0;
-    left: 0;
-    position: absolute;
+.bm {
+    z-index: -100;
+    position: relative;
     margin-top: 70px; /*For sticky navbar spacing*/
 }
 
@@ -91,19 +89,20 @@ body {margin:0; overflow-x: hidden;}
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   background:radial-gradient(circle at top, #7DC6FF 0%, #0476F7 100%);
   background-image: url("../img/blue_bg.svg");
   background-position: 50% 50%;
   height: 500px;
   margin-top: 70px; /*For sticky navbar spacing*/
-  z-index: 100;
+  z-index: -1;
 }
 
-#bm #container {
+#panel1 #container {
   width: 90%;
   /*max-height: 230px;*/
   /*margin: auto;*/
-  /*margin: 200px;*/
+  margin: 200px;
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -112,7 +111,7 @@ body {margin:0; overflow-x: hidden;}
   align-items: center;
 }
 
-#bm #content {
+#panel1 #content {
   	height: 129px;
     width: 596px;
     color: #FFFFFF;
@@ -125,7 +124,7 @@ body {margin:0; overflow-x: hidden;}
     display: flex;
 }
 
-#bm #logo {
+#panel1 #logo {
   /*float: left;*/
 	height: 223px;
 	width: 181px;
@@ -504,17 +503,17 @@ body {margin:0; overflow-x: hidden;}
 }
 
 @media screen and (min-width: 401px) and (max-width: 924px){
-  #bm #container {
+  #panel1 #container {
     margin-top: 100px;
     /*background-color: red;*/
   }
 
-  #bm #content {
+  #panel1 #content {
     text-align:center;
     margin-top: 20px;
   }
 
-  #bm #logo {
+  #panel1 #logo {
     /*background-color: green;*/
     padding-right: 10px;
   }
@@ -589,11 +588,11 @@ body {margin:0; overflow-x: hidden;}
     box-shadow:         inset 0 -11px 0px 0px #FFFFFF;
   }
 
-  #bm {
+  #panel1 {
     height: 400px;
   }
 
-  #bm #content {
+  #panel1 #content {
   	height: 145px;
   	width: 294px;
   	color: #FFFFFF;
@@ -606,14 +605,14 @@ body {margin:0; overflow-x: hidden;}
     /*display: block;*/
   }
 
-  #bm #container {
+  #panel1 #container {
     align-content: center;
     text-align: center;
     margin: 0px;
     /*width: 204px;*/
     height: 321px;
   }
-  #bm #logo {
+  #panel1 #logo {
   	height: 151px;
     width: 107px;
     margin: 20px 0px 20px 0px;
