@@ -102,7 +102,7 @@ body {margin:0; overflow-x: hidden;}
   width: 90%;
   /*max-height: 230px;*/
   /*margin: auto;*/
-  margin: 200px;
+  margin: 150px;
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -823,7 +823,7 @@ body {margin:0; overflow-x: hidden;}
       text-align: center;
     }
     #panel2 h1 {
-      margin-left: -12%;
+      margin-left: -13%;
       margin-right: 0;
       text-align: center;
       width: 100%;
