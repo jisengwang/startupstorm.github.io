@@ -384,9 +384,10 @@ body {margin:0; overflow-x: hidden;}
 
 #contact-us-panel {
   margin-top: 70px; /*For sticky navbar spacing*/
-  height: 834px;
+  min-height: 834px;
   background-color: #212D86;
   overflow: hidden;
+  padding-bottom: 102px;
 }
 
 #contact-us-panel h1 {
@@ -411,13 +412,13 @@ body {margin:0; overflow-x: hidden;}
 }
 
 #contact-us-panel img {
-  padding-top: 16.15%;
+  padding-top: 20.15%;
   padding-bottom: 2.87%;
 }
 
 #contact-us-panel form {
   height: 390px;
-  width: 564px;
+  max-width: 564px;
   padding-left: 10px;
   margin-top: 20px;
 }
@@ -551,6 +552,30 @@ body {margin:0; overflow-x: hidden;}
     width: 90%;
     margin-top: 5%;
   }
+
+  #contact-us-panel form {
+    /*max-width: 500px;*/
+      /*margin-left: 150px;*/
+      /*margin-left: 10%;*/
+      margin-right: 40%;
+      /*width: 60%;*/
+  }
+
+  #contact-us-panel p {
+    /*max-width: 500px;*/
+    /*margin-left: 10%;*/
+    margin-right: 40%;
+
+    /*width: 60%;*/
+      /*margin-left: 150px;*/
+  }
+
+  #contact-us-panel h1 {
+    /*margin-left: 150px;*/
+    /*width: 60%;*/
+    /*margin-left: 10%;*/
+    margin-right: 20%;
+  }
 }
 /* when screen width < 800px */
 @media screen and (max-width: 800px) {
@@ -647,6 +672,19 @@ body {margin:0; overflow-x: hidden;}
   }
 }
 
+@media screen and (min-width: 770px) and (max-width: 800px){
+  #contact-us-panel h1 {
+    margin-left: -20%;
+  }
+  #contact-us-panel p {
+    margin-left: -20%;
+  }
+  #contact-us-panel form {
+    margin-left: -20%;
+    padding-top: 0%;
+  }
+}
+
 /* defining responsive class when hamburger menu active*/
 @media screen and (max-width: 800px) {
   /*.navbar.responsive {position: relative}*/
@@ -678,6 +716,54 @@ body {margin:0; overflow-x: hidden;}
     background-color: #212D86;
     color: #FFFFFF
   }
+
+  #contact-us-panel {
+  }
+
+  #contact-us-panel form {
+    max-width: 500px;
+
+      /*margin-left: 150px;*/
+      /*margin-left: -10%;*/
+      padding-top: 70px;
+      padding-right: 10%;
+      padding-left: 12%;
+  }
+
+  #contact-us-panel p {
+    max-width: 600px;
+    /*margin-left: -10%;*/
+    padding-right: 10%;
+    padding-left: 10%;
+      /*margin-left: 150px;*/
+    margin-bottom: 13px;
+  }
+
+  #contact-us-panel h1 {
+    /*margin-left: 150px;*/
+    /*margin-left: -10%;*/
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #contact-us-panel h1 {
+    /*padding-left: 0;*/
+    padding-right: 0;
+  }
+  #contact-us-panel p {
+    /*padding-left: 0;*/
+    padding-right: 0;
+  }
+
+  #contact-us-panel form {
+    /*padding-left: 0;*/
+    padding-top: 19px;
+    padding-right: 0;
+    width: 500px;
+
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -707,6 +793,24 @@ body {margin:0; overflow-x: hidden;}
     font-size: 19px;
     line-height: 24px;
   }
+
+  #contact-us-panel {
+    padding-bottom: 189px;
+  }
+
+  #contact-us-panel img {
+    padding-top: 35.15%;
+  }
+
+  #contact-us-panel form {
+    width: 320px;
+    padding-top: 30%;
+  }
+
+  #contact-us-panel p {
+    width: 320px;
+  }
+
 }
 
 
@@ -760,6 +864,15 @@ body {margin:0; overflow-x: hidden;}
     margin-left: 0;
     margin-right: 0;
     text-align: center;
+  }
+
+  #contact-us-panel form {
+    max-width: 500px;
+  }
+
+  #contact-us-panel p {
+    max-width: 500px;
+    margin-bottom: 20px;
   }
 
 }
