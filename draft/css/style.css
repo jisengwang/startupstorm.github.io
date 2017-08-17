@@ -78,11 +78,84 @@ body {margin:0; overflow-x: hidden;}
   float: right;
 }
 
-.bm {
+#bm {
     z-index: -100;
     position: relative;
     margin-top: 70px; /*For sticky navbar spacing*/
+    max-width: 100%;
+    height: auto;
+    min-width: 1150px;
+    /*background:radial-gradient(circle at top, #7DC6FF 0%, #0476F7 100%);*/
+    /*background-image: url("../img/blue_bg.svg");*/
+    /*background-position: 50% 50%;*/
+    overflow: hidden;
 }
+
+#outer-box {
+  margin-top: 70px;
+  width: 100%;
+  height: 500px;
+  display: block;
+  position: relative;
+}
+
+#outer-box img {
+  /*width: 100%;
+  height: auto;*/
+	height: 13%;
+	width: 13%;
+  min-width: 150px;
+  min-height: 150px;
+  /*margin-left: 10%;*/
+  margin-right: 40px;
+  display: flex;
+}
+
+#outer-box #inner-box {
+  /*background: #FD8698;*/
+  /*height: 80%;*/
+  /*width: 70%;*/
+  margin-top: 13%;
+  /*margin-left: 17%;*/
+  /*margin-right: 17%;*/
+  /*opacity: 0;*/
+  position: absolute;
+  padding: 0 0 0 0;
+  transition: opacity .5s;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#outer-box #inner-box #container {
+  /*width: 90%;*/
+  /*max-height: 230px;*/
+  /*margin: auto;*/
+  /*margin: 150px;*/
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#outer-box #inner-box #content {
+  /*text-align: center;*/
+  height: 129px;
+  width: 596px;
+  color: #FFFFFF;
+  font-family: "Apercu Pro";
+  font-size: 36px;
+  line-height: 45px;
+  float: right;
+  margin: 0px 0px 0px 0px;
+  /*margin-right: 0px;*/
+  display: flex;
+}
+
 
 #panel1 {
   display: flex;
@@ -133,6 +206,7 @@ body {margin:0; overflow-x: hidden;}
   display: flex;
 }
 
+
 #panel2 h1 {
   /*height: 43px;	*/
   /*width: 196px;	*/
@@ -146,7 +220,7 @@ body {margin:0; overflow-x: hidden;}
   margin-bottom: 1.02%;
   margin-top: 2.14%;*/
   margin-bottom: 1.02%;
-  margin-top: 2.14%;
+  margin-top: 5.14%;
   padding-top: 4.66%;
   /*padding-bottom: 2.27%;*/
 }
@@ -466,9 +540,6 @@ body {margin:0; overflow-x: hidden;}
 }
 
 
-
-/* Fix CSS bug when hamburger menu is open and user resizes screen width > 600px*/
-/* Align center is defined differently when screen width < 600px (see below)*/
 @media screen and (min-width: 801px) {
   .align-center {
     float: right;
@@ -766,6 +837,16 @@ body {margin:0; overflow-x: hidden;}
   }
 }
 
+@media screen and (max-width: 823px) {
+  /*#outer-box img {
+    margin-right: 0px;
+  }*/
+
+  #outer-box #inner-box #content {
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 500px) {
 
   #blurbs {
@@ -858,6 +939,14 @@ body {margin:0; overflow-x: hidden;}
 
 }
 
+@media screen and (max-width: 768px) {
+  /* line 14, ../sass/style.scss */
+  #outer-box #inner-box {
+    margin-top: 5%;
+  }
+
+}
+
 @media screen and (max-width: 600px) {
 
   #panel3 h1 {
@@ -875,4 +964,30 @@ body {margin:0; overflow-x: hidden;}
     margin-bottom: 20px;
   }
 
+}
+
+@media screen and (max-width: 806px) {
+  #outer-box img {
+    margin-right: 0px;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  #outer-box #inner-box #content {
+    font-size: 33px;
+    line-height: 35px;
+  }
+
+  #outer-box img {
+    /*width: 100%;
+    height: auto;*/
+    height: 10%;
+    width: 10%;
+    min-width: 150px;
+    min-height: 150px;
+    /*margin-left: 10%;*/
+    /*margin-right: 40px;*/
+    display: flex;
+  }
 }
