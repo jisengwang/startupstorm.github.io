@@ -1,123 +1,101 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
 <head>
+	<meta charset="UTF-8">
+	<meta content="StartupStorm is a club for aspiring entrepreneurs, programmers and designers at the University of British Columbia." name="description">
+	<meta content="StartupStorm,UBC,entrepreneurs,programmers,designers,software,technology,tech,hackathon" name="keywords">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <meta charset="UTF-8">
-  <meta name="description" content="StartupStorm is a club for aspiring entrepreneurs, programmers and designers at the University of British Columbia.">
-  <meta name="keywords" content="StartupStorm,UBC,entrepreneurs,programmers,designers,software,technology,tech,hackathon">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>StartupStorm</title>
-
-  <link rel="stylesheet" type="text/css" href="css/bulma.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/aos.css">
-  <script src="js/aos.js"></script>
-
+	<title>StartupStorm</title>
+	<link href="css/bulma.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/aos.css" rel="stylesheet" type="text/css">
 </head>
 
 <body style="background-color: #212D86;">
+	<div class="navbar" id="main-navbar">
+		<span class="link" onclick="window.open('index.html','_self')"><img class="logo" src="img/nav_logo.png"></span>
 
-  <script> // For scroll animations
-  AOS.init({once: true});
-  </script>
-
-  <div class="navbar" id="main-navbar">
-    <span class="link" onclick="window.open('index.html','_self')"><img class="logo" src="img/nav_logo.png"/></span>
-    <div class="align-items-right" id="link-container">
-      <p hidden>&#32;&#32;&#32;&#32;</p> <!-- Unicode spaces to push first link off navbar (for formatting purposes) -->
-      <p hidden>&#32;&#32;&#32;&#32;</p> <!-- Unicode spaces to push first link off navbar (for formatting purposes) -->
-      <a href="index.html">Home</a>
-      <!-- <a href="team.html">Our Team</a> -->
-      <a href="contact-us.html" class="selected">Contact Us</a>
-
-      <span class="link" onclick="window.open('https://www.facebook.com/StartupStorm/')"><img class="social-icon first" src="img/facebook_icon.svg"/></span>
-      <span class="link" onclick="window.open('https://twitter.com/UBCStartupStorm')"><img class="social-icon" src="img/twitter_icon.svg"/></span>
-      <span class="link" onclick="window.open('https://www.instagram.com/startupstorm/')"><img class="social-icon last" src="img/ig_icon.svg"/></span>
-    </div>
-    <a href="javascript:void(0);" class="hamburger-menu" onclick="expandMenu()"><img src="img/hamburger_menu.png"/></a>
-
-  </div>
+		<div class="align-items-right" id="link-container">
+			<p hidden="">&#32;&#32;&#32;&#32;</p>
+			<!-- Unicode spaces to push first link off navbar (for formatting purposes) -->
+			<p hidden="">&#32;&#32;&#32;&#32;</p>
+			<!-- Unicode spaces to push first link off navbar (for formatting purposes) -->
+			<a href="index.html">Home</a> <!-- <a href="team.html">Our Team</a> -->
+			 <a class="selected" href="contact-us.html">Contact Us</a> <span class="link" onclick="window.open('https://www.facebook.com/StartupStorm/')"><img class="social-icon first" src="img/facebook_icon.svg"></span> <span class="link" onclick="window.open('https://twitter.com/UBCStartupStorm')"><img class="social-icon" src="img/twitter_icon.svg"></span> <span class="link" onclick="window.open('https://www.instagram.com/startupstorm/')"><img class="social-icon last" src="img/ig_icon.svg"></span>
+		</div>
+		<a class="hamburger-menu" href="javascript:void(0);" onclick="expandMenu()"><img src="img/hamburger_menu.png"></a>
+	</div>
 
 
-  <script> // For when hamburger menu is clicked
-  function expandMenu() {
-    var nav = document.getElementById("main-navbar");
-    var links = document.getElementById("link-container");
-    if (nav.className === "navbar") {
-      nav.className += " responsive";
-      nav.className
-    } else {
-      nav.className = "navbar";
-    }
-    if (links.className.includes("align-center")){
-      links.className = "align-items-right"
-    } else {
-      links.className += " align-center";
-    }
-  }
-  </script>
-
-  <div id="contact-us-panel">
-
-    <div class="columns">
-      <div class="column is-offset-3">
-        <div class="container">
-        <div class="tile is-parent">
-          <article class="tile is-child">
-            <h1 data-aos="fade">Contact us</h1>
-            <div class="content" data-aos="fade">
-              <p>StartupStorm is always looking for new ventures, opportunities, and connections. If you are interested in working with us, joining us or speaking at an event, feel free to connect with StartupStorm today. Feel free to e-mail us
-                at <a href="mailto:info@startupstorm.org" target="_top" id="email">info@startupstorm.org</a> or use the form below to submit a message.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-      </div>
-    </div>
+	<div id="contact-us-panel">
+		<div class="columns">
+			<div class="column is-offset-3">
+				<div class="container">
+					<div class="tile is-parent">
+						<article class="tile is-child">
+							<h1 data-aos="fade">Contact us</h1>
 
 
-    <div class="columns" data-aos="slide-up">
-      <div class="column is-offset-3">
-        <div class="container">
-        <form action="https://formspree.io/info@startupstorm.org"
-      method="POST">
-
-          <input type="hidden" name="_next" value="https://www.startupstorm.org/contact-us-complete"/>
-
-          <div class="field">
-            <label class="label">Name *</label>
-            <div class="control">
-              <input class="input" type="text" name="name" placeholder="Enter your name" maxlength="70" required>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">E-mail address *</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="hello@gmail.com" name="email" maxlength="254" required>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Message *</label>
-            <div class="control">
-              <textarea class="textarea" placeholder="Enter your message" name="message" required></textarea>
-            </div>
-          </div>
-
-          <center><button type="submit">Submit Message</button></center>
-
-        </form>
-      </div>
-      </div>
-    </div>
-    <!-- <div class="column is-centered"><img src="img/sent_icon.svg"></img></div> -->
-  </div>
+							<div class="content" data-aos="fade">
+								<p>StartupStorm is always looking for new ventures, opportunities, and connections. If you are interested in working with us, joining us or speaking at an event, feel free to connect with StartupStorm today. Feel free to e-mail us at <a href="mailto:info@startupstorm.org" id="email" target="_top">info@startupstorm.org</a> or use the form below to submit a message.</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
-  </body>
+		<div class="columns" data-aos="slide-up">
+			<div class="column is-offset-3">
+				<div class="container">
+					<form action="https://formspree.io/chamantha@hotmail.ca" method="post">
+						<input name="_next" type="hidden" value="https://www.startupstorm.org/contact-us-complete">
 
-  </html>
+						<div class="field">
+							<label class="label">Name *</label>
+
+							<div class="control">
+								<input class="input" maxlength="70" name="name" placeholder="Enter your name" required="" type="text">
+							</div>
+						</div>
+
+
+						<div class="field">
+							<label class="label">E-mail address *</label>
+
+							<div class="control">
+								<input class="input" maxlength="254" name="email" placeholder="hello@gmail.com" required="" type="text">
+							</div>
+						</div>
+
+
+						<div class="field">
+							<label class="label">Message *</label>
+
+							<div class="control">
+								<textarea class="textarea" name="message" placeholder="Enter your message" required=""></textarea>
+							</div>
+						</div>
+
+
+						<center>
+							<button type="submit">Submit Message</button>
+						</center>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="column is-centered"><img src="img/sent_icon.svg"></img></div> -->
+	</div>
+
+
+  <!-- Scripts -->
+  <script src="js/aos.js"></script>
+  <script src="animation/bodymovin.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

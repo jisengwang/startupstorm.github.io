@@ -14,18 +14,15 @@
   <link rel="stylesheet" type="text/css" href="css/bulma.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/aos.css">
-  <script src="js/aos.js"></script>
 
 </head>
 
 <body>
 
-  <script> // For scroll animations
-  AOS.init({once: true});
-  </script>
-
   <div class="navbar" id="main-navbar">
+
     <span class="link" onclick="window.open('index.html','_self')"><img class="logo" src="img/nav_logo.png"/></span>
+
     <div class="align-items-right" id="link-container">
       <p hidden>&#32;&#32;&#32;&#32;</p> <!-- Unicode spaces to push first link off navbar (for formatting purposes) -->
       <p hidden>&#32;&#32;&#32;&#32;</p> <!-- Unicode spaces to push first link off navbar (for formatting purposes) -->
@@ -37,42 +34,44 @@
       <span class="link" onclick="window.open('https://twitter.com/UBCStartupStorm')"><img class="social-icon" src="img/twitter_icon.svg"/></span>
       <span class="link" onclick="window.open('https://www.instagram.com/startupstorm/')"><img class="social-icon last" src="img/ig_icon.svg"/></span>
     </div>
+
     <a href="javascript:void(0);" class="hamburger-menu" onclick="expandMenu()"><img src="img/hamburger_menu.png"/></a>
 
   </div>
 
+  <!-- panel1 for IE -->
+  <div id="panel1" style="display:none;">
 
-  <script> // For when hamburger menu is clicked
-  function expandMenu() {
-    var nav = document.getElementById("main-navbar");
-    var links = document.getElementById("link-container");
-    if (nav.className === "navbar") {
-      nav.className += " responsive";
-      nav.className
-    } else {
-      nav.className = "navbar";
-    }
-    if (links.className.includes("align-center")){
-      links.className = "align-items-right"
-    } else {
-      links.className += " align-center";
-    }
-  }
-  </script>
-  
-  <div id="panel1">
     <section id="container">
       <img src="img/header_logo.svg" id="logo"/>
       <div id="content">StartupStorm is a club for aspiring entrepreneurs, programmers, and designers at UBC. </div>
     </section>
+
+  </div>
+
+  <!-- animated version of panel1 -->
+  <div id="outer-box">
+
+    <div id="bm"></div>
+
+    <div id="inner-box">
+      <section id="container">
+        <img src="img/header_logo.svg" id="logo"/>
+        <div id="content">StartupStorm is a club for aspiring entrepreneurs, programmers, and designers at UBC. </div>
+      </section>
+    </div>
+
   </div>
 
   <div id="panel2">
+
     <div id="container" data-aos="fade"><h1>What we do</h1></div>
+
     <div id="container"><p data-aos="fade">StartupStorm is a club for aspiring entrepreneurs, programmers and designers at the University of British Columbia.</p><br>
       <p data-aos="fade">Our mission is to foster an environment that encourages innovation and creativity in the world of tech in which students can connect with like-minded and passionate individuals. By providing the right tools, resources and support, students can gain hands on experience, mentorship and learn how to use cutting-edge technology outside of the classroom setting.</p>
       <br><p data-aos="fade">We’re taking UBC innovation by storm.</p>
     </div><br><br>
+
   </div>
 
   <div id="blurbs">
@@ -109,7 +108,7 @@
         <img src="img/laptop_illustration.svg"/>
       </div>
 
-      <div class="column is-narrow" style="max-width:450px;">
+      <div class="column is-narrow" style="max-width:450px;margin-bottom:10px;">
         <h2>Build real, meaningful projects</h2>
         <p>With events like nwHacks, you’ll have the opportunity to collaborate on real projects with developers, designers and entrepreneurial students with the support of industry mentors.</p>
       </div>
@@ -119,7 +118,9 @@
   </div>
 
   <div id="panel3">
+
     <h1 data-aos="fade">Upcoming events</h1>
+
     <div class="container" data-aos="zoom-in">
 
       <div id="event">
@@ -147,10 +148,12 @@
   <div id="panel4">
 
     <div class="container" data-aos="fade"><h1>Contact us</h1></div>
-    <div data-aos="fade">
 
+    <div data-aos="fade">
       <div class="container"><p>StartupStorm is always looking for new ventures, opportunities, and connections. If you are interested in working with us, joining us or speaking at one of our events, feel free to connect with StartupStorm today. Feel free to e-mail us at <a href="mailto:info@startupstorm.org" target="_top" id="email">info@startupstorm.org</a></p></div>
+
       <div class="container">
+
         <a href="contact-us.html" id="message"><button>Send a message</button></a>
 
         <div id="icon-set"><center>
@@ -166,6 +169,12 @@
 
   </div>
 
+
+  <!-- Scripts -->
+  <script src="js/aos.js"></script>
+  <script src="animation/bodymovin.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/index.js"></script>
 
 </body>
 
