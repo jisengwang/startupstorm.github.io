@@ -23,7 +23,6 @@ body {margin:0; overflow-x: hidden;}
 	box-shadow: 0 3px 14px 0 #676767;
   align-items: right;
   z-index: 1;
-
   /*To make navbar sticky*/
   top: 0;
   position: fixed;
