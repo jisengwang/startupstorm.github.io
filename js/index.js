@@ -1,3 +1,5 @@
+// Code for deciding to render animation or not (depending on browser)
+
 if (detectIE()) { // if IE -> use non-animated background
   document.getElementById("outer-box").style.display = "none";
   document.getElementById("panel1").style.display = "flex";
