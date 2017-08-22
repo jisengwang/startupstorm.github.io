@@ -1,4 +1,6 @@
 AOS.init({once: true}); // for scroll animations
+window.addEventListener('load', AOS.refresh);
+
 
 function expandMenu() {  // For when hamburger menu is clicked
   var nav = document.getElementById("main-navbar");
