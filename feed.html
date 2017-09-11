@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+
+<body>
+
+<a href="http://www.startupstorm.org"><h3 class="display-4 text-center">StartupStorm</h3></a>
+<h4 class="display-5 text-center">RSS FEED AGGREGATOR</h4>
+<p id="feed"></p>
+
+<script>
+
+function httpGetAsync(theUrl, callback)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.send(null);
+}
+
+
+// parse student blogs
+
+
+var text;
+
+httpGetAsync('https://cdn.rawgit.com/startupstorm/student-blogs/eca2270b/blogs.opml', function(response) {
+	text = response;
+	
+	var parser, xmlDoc;
+
+	parser = new DOMParser();
+	xmlDoc = parser.parseFromString(text,"text/xml");
+	var url;
+	var url_list = [];
+	
+	var num_urls = (xmlDoc).getElementsByTagName("body").length;
+	
+	// parse URLs of blogs
+	for (i = 0; i < num_urls; i++) { 
+		url = (xmlDoc).getElementsByTagName("body")[i].getElementsByTagName("outline")[0].getAttribute("xmlUrl");
+		url_list.push(url);
+	}
+	
+	// for each blog URL
+	for (i = 0; i < url_list.length; i++){
+		httpGetAsync(url_list[i], function(response) {
+			// console.log(response);
+			
+			parser = new DOMParser();
+			xmlDoc = parser.parseFromString(response,"text/xml");
+				
+			var blog_title = Array.prototype.slice.call((xmlDoc).getElementsByTagName("title"))[0].innerHTML;
+			
+			
+			var num_posts = (xmlDoc).getElementsByTagName("channel").length;
+			post_list = [];
+			var post = " ";
+			
+			console.log(blog_title);
+			// parse posts from blog
+			while (post) { 
+				var post = (xmlDoc).getElementsByTagName("item");
+				try {
+					post_list.push(post);
+					console.log(post);
+					(xmlDoc).removeChild(post);
+				} catch (e) {
+					post = null;
+				}
+			}
+			
+			//convert post_list to an array from HTML collection
+			post_list = Array.prototype.slice.call(post_list)[0];
+			
+			// render posts to page
+			for (i = 0; i < post_list.length; i++){
+				var current_post = post_list[i];
+				var post_title = current_post.getElementsByTagName("title")[0].childNodes[0].textContent;
+				var post_link = current_post.getElementsByTagName("link")[0].childNodes[0].textContent;
+				var post_description = current_post.getElementsByTagName("description")[0].childNodes[0].textContent;
+				
+				document.getElementById('feed').insertAdjacentHTML('beforeend', '<center><div class="card text-center" style="max-width: 50rem;"><h5 class="card-header">'+blog_title+'</h5><div class="card-body"><h4 class="card-title">'+'<a href="' + post_link + '">'+ post_title + '</a>'+'</h4><p class="card-text">'+post_description+'</p>'+'<a class="btn btn-primary" href="' + post_link + '">Read Post</a>'+'</div></div></center>')
+			}
+		});
+	}
+});
+
+</script>
+
+</body>
+</html>
