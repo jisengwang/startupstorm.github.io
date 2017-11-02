@@ -397,6 +397,17 @@ body {margin:0; overflow-x: hidden;}
   cursor: pointer;
 }
 
+#newsletter-blurb {
+  padding-top: 12px;
+  font-size: 12pt;
+  color: black;
+  font-weight: bold;
+}
+
+#newsletter-blurb a {
+  color: #137AED;
+}
+
 
 #panel4 {
 	min-height: 360px;
