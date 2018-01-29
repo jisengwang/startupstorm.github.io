@@ -563,10 +563,10 @@ body {margin:0; overflow-x: hidden;}
 }
 
 #contact-us-panel p {
-	color: #FFFFFF;
-	font-family: "Apercu Pro";
-	font-size: 19px;
-	line-height: 25px;
+  color: #FFFFFF;
+  font-family: "Apercu Pro";
+  font-size: 19px;
+  line-height: 25px;
   width: 600px;
   height: 100px;
 }
@@ -584,10 +584,10 @@ body {margin:0; overflow-x: hidden;}
 }
 
 #contact-us-panel label {
-	color: #FFFFFF;
-	font-family: "Apercu Pro";
-	font-size: 19px;
-	line-height: 24px;
+  color: #FFFFFF;
+  font-family: "Apercu Pro";
+  font-size: 19px;
+  line-height: 24px;
 }
 
 #contact-us-panel .field {
@@ -595,8 +595,8 @@ body {margin:0; overflow-x: hidden;}
 }
 
 #contact-us-panel button {
-	border: 1px solid #FFFFFF;
-	padding: 10px 20px 10px 20px;
+  border: 1px solid #FFFFFF;
+  padding: 10px 20px 10px 20px;
   background: transparent;
   width: 224px;
   border-radius: 30px;
@@ -624,6 +624,92 @@ body {margin:0; overflow-x: hidden;}
 #contact-us-panel #email {
   color: #6eb2ff
 }
+
+
+
+
+
+
+#feedback-panel {
+  margin-top: 70px; /*For sticky navbar spacing*/
+  min-height: 864px;
+  background-color: #212D86;
+  overflow: hidden;
+  padding-bottom: 102px;
+}
+
+#feedback-panel h1 {
+  color: #0476F7;
+  color: #FFFFFF;
+  font-family: "Apercu Pro";
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 45px;
+  margin-bottom: 32px;
+  margin-top: 2.14%;
+  padding-top: 6.66%;
+}
+
+#feedback-panel p {
+  color: #FFFFFF;
+  font-family: "Apercu Pro";
+  font-size: 19px;
+  line-height: 25px;
+  width: 600px;
+  padding-bottom: 30px;
+}
+
+#feedback-panel form {
+  height: 390px;
+  max-width: 564px;
+  padding-left: 10px;
+  margin-top: -20px;
+}
+
+#feedback-panel label {
+  color: #FFFFFF;
+  font-family: "Apercu Pro";
+  font-size: 19px;
+  line-height: 24px;
+  padding-bottom: 10px;
+}
+
+#feedback-panel .field {
+  padding-bottom: 2.77%;
+}
+
+#feedback-panel button {
+  border: 1px solid #FFFFFF;
+  padding: 10px 20px 10px 20px;
+  background: transparent;
+  width: 224px;
+  border-radius: 30px;
+  color: #FFFFFF;
+  font-family: "Apercu Pro";
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  margin-top: 3.3%;
+  display: inline-block;
+}
+
+#feedback-panel button:hover {
+  background-color: #0476F7;
+  cursor: pointer;
+}
+
+#feedback-panel #confirm {
+  font-family: "Apercu Bold Pro";
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 45px;
+}
+
+#feedback-panel #email {
+  color: #6eb2ff
+}
+
+
 
 @media screen and (min-width: 801px) {
   .align-center {
@@ -735,6 +821,18 @@ body {margin:0; overflow-x: hidden;}
     /*margin-left: 150px;*/
     /*width: 60%;*/
     /*margin-left: 10%;*/
+    margin-right: 20%;
+  }
+
+  #feedback-panel form {
+    margin-right: 40%;
+  }
+
+  #feedback-panel p {
+    margin-right: 40%;
+  }
+
+  #feedback-panel h1 {
     margin-right: 20%;
   }
 }
