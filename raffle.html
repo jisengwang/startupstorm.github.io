@@ -66,54 +66,55 @@
 			if (strVal == "" || isNaN(strVal)){
 				window.alert("Please enter a valid number");
 				return
+			}
 				var numTickets = parseInt(strVal);
 				var ticketTable = generateTable(numTickets);
 				document.body.innerHTML = "";
 				document.body.appendChild(ticketTable);
 				// saveTableAsPDF(ticketTable);
-			}
+		}
 
-			function generateTicketHash(id){
-				var hash = "";
-				var charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-				for (var i = 0; i < 5; i++){
-					hash += charSet.charAt(Math.floor(Math.random() * charSet.length));
-				}
-				return "#"+hash;
+		function generateTicketHash(id){
+			var hash = "";
+			var charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+			for (var i = 0; i < 5; i++){
+				hash += charSet.charAt(Math.floor(Math.random() * charSet.length));
 			}
+			return "#"+hash;
+		}
 
-			function generateTable(numTickets){
-				numRows = Math.ceil(numTickets/5);
-				var tickets  = document.createElement('table');
-				tickets.style.border = '1px solid black';
-				tickets.style.margin = '50px 50px 50px 50px';
-				tickets.style.pageBreakInside = 'avoid';
-				var counter = 0;
-				for (var i = 0; i < numRows; i++){
-					var tr = tickets.insertRow();
-					tr.style.pageBreakInside = 'avoid';
-					for (var j = 0; j < 5; j++){
-						counter += 1;
-						if (counter > numTickets){
-							break;
-						}
-						var td = tr.insertCell();
-						td.style.width = '350px';
-						td.style.height = '120px';
-						td.style.padding = '30px 10px 10px 10px';
-						td.style.textAlign = 'center';
-						td.style.fontWeight = 'bold';
-						td.style.fontSize = '20px';
-						td.style.pageBreakInside = 'avoid';
-						td.appendChild(document.createTextNode(counter));
-						td.appendChild(document.createElement('br'));
-						td.appendChild(document.createElement('br'));
-						td.appendChild(document.createTextNode(generateTicketHash(counter)));
-						td.style.border = '1px solid black';
+		function generateTable(numTickets){
+			numRows = Math.ceil(numTickets/5);
+			var tickets  = document.createElement('table');
+			tickets.style.border = '1px solid black';
+			tickets.style.margin = '50px 50px 50px 50px';
+			tickets.style.pageBreakInside = 'avoid';
+			var counter = 0;
+			for (var i = 0; i < numRows; i++){
+				var tr = tickets.insertRow();
+				tr.style.pageBreakInside = 'avoid';
+				for (var j = 0; j < 5; j++){
+					counter += 1;
+					if (counter > numTickets){
+						break;
 					}
+					var td = tr.insertCell();
+					td.style.width = '350px';
+					td.style.height = '120px';
+					td.style.padding = '30px 10px 10px 10px';
+					td.style.textAlign = 'center';
+					td.style.fontWeight = 'bold';
+					td.style.fontSize = '20px';
+					td.style.pageBreakInside = 'avoid';
+					td.appendChild(document.createTextNode(counter));
+					td.appendChild(document.createElement('br'));
+					td.appendChild(document.createElement('br'));
+					td.appendChild(document.createTextNode(generateTicketHash(counter)));
+					td.style.border = '1px solid black';
 				}
-				return tickets
 			}
+			return tickets
+		}
 
 	// function saveTableAsPDF(table){
 	// 	var element = table;
