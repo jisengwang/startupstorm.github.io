@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="StartupStorm is a club for aspiring entrepreneurs, programmers and designers at the University of British Columbia." name="description">
+	<meta content="StartupStorm,UBC,entrepreneurs,programmers,designers,software,technology,tech,hackathon" name="keywords">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<title>StartupStorm</title>
+	<link href="css/bulma.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/aos.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+	<link rel="manifest" href="img/favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body style="min-height: 600px">
+	<div class="columns">
+		<div class="column">
+		</div>
+		<div class="column">
+				<br><br><br>
+				<center style="display: inline;"><h1 class="title" style="color:#0476F7">Raffle Ticket Generator <img width="50px" height="50px"src="http://cultofthepartyparrot.com/parrots/hd/parrot.gif"></img></h1></center>
+				<br>
+			<div class="field is-grouped">
+				<p class="control is-expanded">
+					<input class="input" id="numParticipants" type="text" placeholder="Enter number of participants">
+				</p>
+				<p class="control">
+					<a class="button is-info" onclick="generateTickets()">
+						Generate Tickets
+					</a>
+				</p>
+			</div>
+		</div>
+		<div class="column">
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<!-- <script src="js/html2pdf.bundle.min.js"></script> -->
+
+	<script>
+		function generateTickets(){
+			try {
+				var numTickets = parseInt(document.getElementById("numParticipants").value);
+			} catch (err){
+				var numTickets = 80;
+				window.alert("Incorrect number entered - using 80 participants as default.");
+			}
+			var ticketTable = generateTable(numTickets);
+			document.body.innerHTML = "";
+			document.body.appendChild(ticketTable);
+		// saveTableAsPDF(ticketTable);
+	}
+
+	function generateTicketHash(id){
+		var hash = "";
+		var charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+		for (var i = 0; i < 5; i++){
+			hash += charSet.charAt(Math.floor(Math.random() * charSet.length));
+		}
+		return "#"+hash;
+	}
+
+	function generateTable(numTickets){
+		numRows = Math.ceil(numTickets/5);
+		var tickets  = document.createElement('table');
+		tickets.style.border = '1px solid black';
+		tickets.style.margin = '50px 50px 50px 50px';
+		tickets.style.pageBreakInside = 'avoid';
+		var counter = 0;
+		for (var i = 0; i < numRows; i++){
+			var tr = tickets.insertRow();
+			tr.style.pageBreakInside = 'avoid';
+			for (var j = 0; j < 5; j++){
+				counter += 1;
+				if (counter > numTickets){
+					break;
+				}
+				var td = tr.insertCell();
+				td.style.width = '350px';
+				td.style.height = '120px';
+				td.style.padding = '30px 10px 10px 10px';
+				td.style.textAlign = 'center';
+				td.style.fontWeight = 'bold';
+				td.style.fontSize = '20px';
+				td.style.pageBreakInside = 'avoid';
+				td.appendChild(document.createTextNode(counter));
+				td.appendChild(document.createElement('br'));
+				td.appendChild(document.createElement('br'));
+				td.appendChild(document.createTextNode(generateTicketHash(counter)));
+				td.style.border = '1px solid black';
+			}
+		}
+		return tickets
+	}
+
+	// function saveTableAsPDF(table){
+	// 	var element = table;
+	// 	html2pdf(element);
+	// }
+</script>
+
+
+</body>
+</html>
