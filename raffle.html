@@ -11,6 +11,7 @@
 	<link href="css/bulma.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href="css/aos.css" rel="stylesheet" type="text/css">
+	<link href="css/print.css" rel="stylesheet" media="print" type="text/css" >
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<!-- Favicons -->
@@ -35,7 +36,7 @@
 </head>
 
 <body style="min-height: 600px">
-	<div class="columns">
+	<div class="columns no-print">
 		<div class="column">
 		</div>
 		<div class="column">
@@ -56,6 +57,7 @@
 		<div class="column">
 		</div>
 	</div>
+	<div id="ticket-table"></div>
 
 	<!-- Scripts -->
 	<!-- <script src="js/html2pdf.bundle.min.js"></script> -->
@@ -69,8 +71,8 @@
 			}
 				var numTickets = parseInt(strVal);
 				var ticketTable = generateTable(numTickets);
-				document.body.innerHTML = "";
-				document.body.appendChild(ticketTable);
+				document.getElementById("ticket-table").innerHTML = "";
+				document.getElementById("ticket-table").appendChild(ticketTable);
 				// saveTableAsPDF(ticketTable);
 		}
 
