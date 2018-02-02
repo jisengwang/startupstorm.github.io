@@ -13,6 +13,7 @@
 	<link href="css/aos.css" rel="stylesheet" type="text/css">
 	<link href="css/print.css" rel="stylesheet" media="print" type="text/css" >
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/countUp.min.js"></script>
 
 	<!-- Favicons -->
 	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
@@ -52,10 +53,27 @@
 						Generate Tickets
 					</a>
 				</p>
+				<p class="control" id="select-winner-button" style="display: none">
+					<a class="button is-danger" onclick="selectWinner()">
+						Select Winner
+					</a>
+				</p>
 			</div>
 		</div>
 		<div class="column">
 		</div>
+	</div>
+	<div class="no-print">
+	<center><br>
+		<table style="border: 1px solid black">
+			<tr>
+				<td id="winner-cell" style="padding: 20px 80px 50px 80px; text-align: center; font-size: 20px; font-weight: bold; display: none;">
+					<div id="winner-cell-id"></div><br>
+					<div id="winner-cell-hash"></div>
+				</td>
+			</tr>
+		</table>
+	</center><br>
 	</div>
 	<div id="ticket-table"></div>
 
@@ -63,60 +81,89 @@
 	<!-- <script src="js/html2pdf.bundle.min.js"></script> -->
 
 	<script>
+		var numTickets;
+		var ticketHashes;
+
 		function generateTickets(){
 			var strVal = document.getElementById("numParticipants").value;
 			if (strVal == "" || isNaN(strVal)){
 				window.alert("Please enter a valid number");
 				return
 			}
-				var numTickets = parseInt(strVal);
-				var ticketTable = generateTable(numTickets);
-				document.getElementById("ticket-table").innerHTML = "";
-				document.getElementById("ticket-table").appendChild(ticketTable);
+			numTickets = parseInt(strVal);
+			ticketHashes = [0];
+			var ticketTable = generateTable(numTickets);
+			document.getElementById("winner-cell").style.display = "none";
+			document.getElementById("winner-cell-id").innerHTML = "";
+			document.getElementById("winner-cell-hash").innerHTML = "";
+			document.getElementById("ticket-table").innerHTML = "";
+			document.getElementById("ticket-table").appendChild(ticketTable);
+			document.getElementById("select-winner-button").style.display = "block";
 				// saveTableAsPDF(ticketTable);
-		}
-
-		function generateTicketHash(id){
-			var hash = "";
-			var charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-			for (var i = 0; i < 5; i++){
-				hash += charSet.charAt(Math.floor(Math.random() * charSet.length));
 			}
-			return "#"+hash;
-		}
 
-		function generateTable(numTickets){
-			numRows = Math.ceil(numTickets/5);
-			var tickets  = document.createElement('table');
-			tickets.style.border = '1px solid black';
-			tickets.style.margin = '50px 50px 50px 50px';
-			tickets.style.pageBreakInside = 'avoid';
-			var counter = 0;
-			for (var i = 0; i < numRows; i++){
-				var tr = tickets.insertRow();
-				tr.style.pageBreakInside = 'avoid';
-				for (var j = 0; j < 5; j++){
-					counter += 1;
-					if (counter > numTickets){
-						break;
+			function generateTicketHash(id){
+				var hash = "";
+				var charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+				for (var i = 0; i < 5; i++){
+					hash += charSet.charAt(Math.floor(Math.random() * charSet.length));
+				}
+				return "#"+hash;
+			}
+
+			function generateTable(numTickets){
+				numRows = Math.ceil(numTickets/5);
+				var tickets  = document.createElement('table');
+				tickets.style.border = '1px solid black';
+				tickets.style.margin = '50px 50px 50px 50px';
+				tickets.style.pageBreakInside = 'avoid';
+				var counter = 0;
+				for (var i = 0; i < numRows; i++){
+					var tr = tickets.insertRow();
+					tr.style.pageBreakInside = 'avoid';
+					for (var j = 0; j < 5; j++){
+						counter += 1;
+						if (counter > numTickets){
+							break;
+						}
+						hash = generateTicketHash(counter);
+						ticketHashes.push(hash);
+						var td = tr.insertCell();
+						td.style.width = '350px';
+						td.style.height = '120px';
+						td.style.padding = '30px 10px 10px 10px';
+						td.style.textAlign = 'center';
+						td.style.fontWeight = 'bold';
+						td.style.fontSize = '20px';
+						td.style.pageBreakInside = 'avoid';
+						td.appendChild(document.createTextNode(counter));
+						td.appendChild(document.createElement('br'));
+						td.appendChild(document.createElement('br'));
+						td.appendChild(document.createTextNode(hash));
+						td.style.border = '1px solid black';
 					}
-					var td = tr.insertCell();
-					td.style.width = '350px';
-					td.style.height = '120px';
-					td.style.padding = '30px 10px 10px 10px';
-					td.style.textAlign = 'center';
-					td.style.fontWeight = 'bold';
-					td.style.fontSize = '20px';
-					td.style.pageBreakInside = 'avoid';
-					td.appendChild(document.createTextNode(counter));
-					td.appendChild(document.createElement('br'));
-					td.appendChild(document.createElement('br'));
-					td.appendChild(document.createTextNode(generateTicketHash(counter)));
-					td.style.border = '1px solid black';
+				}
+				return tickets
+			}
+
+			function selectWinner(){
+				document.getElementById("winner-cell").style.display = "block";
+				var winner = Math.floor(Math.random()*numTickets) + 1;
+				var numAnim = new CountUp("winner-cell-id", 1, winner);
+				if (!numAnim.error) {
+					numAnim.start(getAndSetWinnerHash(winner, numAnim));
+				} else {
+					console.error(numAnim.error);
 				}
 			}
-			return tickets
-		}
+
+			function getAndSetWinnerHash(winner, numAnim){
+				var hash = ticketHashes[winner];
+				numAnim.reset();
+				var winnerCellHash = document.getElementById("winner-cell-hash");
+				winnerCellHash.style.display = "block";
+				winnerCellHash.innerHTML = hash;
+			}
 
 	// function saveTableAsPDF(table){
 	// 	var element = table;
